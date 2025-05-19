@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Hub</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="main.css" />
+  
+ 
+</head>
+<body>
+  <div class="wrapper">
+    <form class="login-card" id="loginForm" method="POST">
+      <h2>Tech Hub Login</h2>
+
+      <div class="input-field">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Type your username" name="username" id="username" required />
+      </div>
+
+      <div class="input-field">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Type your password" name="password" id="password" required />
+      </div>
+
+      <a href="#" class="forgot">Forgot password?</a>
+
+      <button type="submit" class="btn">LOGIN</button>
+
+      <p class="text">Or Sign Up Using</p>
+
+      <div class="social-icons">
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fab fa-google"></i></a>
+      </div>
+
+      <a href="#" class="signup-link">SIGN UP</a>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p class="footer-text">&copy; 2025 Tech Hub. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript to send form data -->
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        const response = await fetch('https://yourserver.com/api/login', { // Replace with your real endpoint
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ username, password })
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          alert('Login successful!');
+          // Optionally redirect or update UI
+        } else {
+          alert('Login failed. Please check your credentials.');
+        }
+      } catch (err) {
+        alert('Error connecting to server.');
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>

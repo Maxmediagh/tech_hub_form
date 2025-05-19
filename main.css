@@ -1,0 +1,161 @@
+
+/* style.css */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#1cc6ff 0%,#b625ff 100%);
+}
+
+.wrapper{
+  width:100%;
+  max-width:420px;
+  padding:20px;
+}
+
+.login-card{
+  background:#fff;
+  padding:45px 40px 60px;
+  border-radius:8px;
+  width:100%;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.login-card h2{
+  font-size:32px;
+  font-weight:600;
+  margin-bottom:35px;
+}
+
+.input-field{
+  position:relative;
+  width:100%;
+  margin:18px 0;
+}
+
+.input-field i{
+  position:absolute;
+  top:50%;
+  left:15px;
+  transform:translateY(-50%);
+  color:#727272;
+  font-size:15px;
+}
+
+.input-field input{
+  width:100%;
+  padding:14px 14px 14px 45px;
+  border:none;
+  outline:none;
+  font-size:15px;
+  color:#333;
+  border-bottom:1px solid #d8d8d8;
+  transition:.3s;
+}
+
+.input-field input:focus{
+  border-color:#4f8dff;
+}
+
+.forgot{
+  display:block;
+  text-align:right;
+  font-size:13px;
+  color:#666;
+  text-decoration:none;
+  margin-top:6px;
+}
+
+.btn{
+  width:100%;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  margin:35px 0 25px;
+  padding:14px 0;
+  font-size:16px;
+  font-weight:600;
+  color:#fff;
+  border-radius:30px;
+  background:linear-gradient(90deg,#1dc8ff 0%,#ff22df 100%);
+  transition:.3s;
+}
+
+.btn:hover{
+  opacity:.9;
+}
+
+.text{
+  font-size:14px;
+  color:#999;
+  margin-bottom:22px;
+}
+
+.social-icons{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin-bottom:70px;
+}
+
+.social-icons a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  color:#fff;
+  font-size:22px;
+  text-decoration:none;
+}
+
+.social-icons .facebook{ background:#3b5999; }
+.social-icons .twitter{ background:#1DA1F2; }
+.social-icons .google{ background:#DB4437; }
+
+.signup-link{
+  color:#000;
+  font-weight:600;
+  font-size:15px;
+  text-decoration:none;
+}
+
+.signup-link:hover{
+  text-decoration:underline;
+}
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #222;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    footer .footer-icons a {
+      color: #fff;
+      margin: 0 12px;
+      font-size: 18px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer .footer-icons a:hover {
+      color: #1dc8ff;
+    }
+
+    footer .footer-text {
+      font-size: 13px;
+      color: #ccc;
+      margin-top: 8px;
+    }
